@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+$purple: #8a4d76;
+$pink: #fa7c91;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+$blue-gray: #161d2e;
+$light-blue-gray: #334155;
+
+// Bulma's global variable overrides
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Bulma's component variable overrides
+$body-background-color: $blue-gray;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$input-background-color: $light-blue-gray;
+$input-color: white;
+
+
+// Import only what you need from Bulma
+@import '~bulma/bulma.sass';
+
+body {
+  background-color: #161d2e;
+  padding: 5%;
+}
+
+code {
+  background-color: blanchedalmond;
+  margin: 0.7rem 0.2rem;
+  padding: 0.2rem 0.7rem;
+  color: darkgreen;
+  border-radius: 2px;
+}
+
+.App {
+  max-width: 960px;
+  font-family: sans-serif;
+  text-align: left;
+}
+.nav li:not(:first-child) {
+  padding-left: 1rem;
+}
+.nav li a {
+  color: #FDF2F8;
+  text-decoration: none;
+  background-color: #EC4899;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+}
+
+.nav {
+  margin-bottom: 5%;
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+}
