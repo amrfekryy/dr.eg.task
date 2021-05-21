@@ -92,6 +92,7 @@ const solution = () => {
   }, {})
 
   console.table(final_table)
+  return final_table
 }
 
 const ChallengeOne = () => {
@@ -108,6 +109,11 @@ const ChallengeOne = () => {
       </h2>
       <h2 className="subtitle has-text-grey-lighter">
         You may not install any additional libraries.
+      </h2>
+
+      <br /><h1 className="title is-3 has-text-white">Solution:</h1>
+      <h2 className="subtitle has-text-grey-lighter">
+        Press <code>F12</code> then <code>F5</code> to see the table in console. And check <code>/tasks/one.js</code> for the code.
       </h2>
     </>
   );
