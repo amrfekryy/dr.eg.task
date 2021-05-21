@@ -6,7 +6,7 @@ import { BackToHome } from "../App";
   eg: `?page=3&results=10`
 */
 
-export const fetchData = ({page, results=5}) => {
+export const fetchData = ({page=1, results=5}) => {
   const url = `https://randomuser.me/api/?seed=dexi-interview&page=${page}&results=${results}`
   return fetch(url)
 }
@@ -23,7 +23,9 @@ const ChallengeTwo = () => {
     
     fetchData({ page, results:5 })
     .then(response => response.json())
-    .then(({ results:new_users=[] }) => {
+    .then((response) => {
+      const { results:new_users=[] } = response
+      // console.log('SUCCESS', response)
       // console.log('current users', users)
       // console.log('new users', new_users);
       if ( new_users.length ) {
@@ -32,7 +34,10 @@ const ChallengeTwo = () => {
         setIsLoading(false)
       }
     })
-    .catch(() => setIsLoading(false))
+    .catch((error) => {
+      // console.log('ERROR', error)
+      setIsLoading(false)
+    })
   }
 
   useEffect(() => {
