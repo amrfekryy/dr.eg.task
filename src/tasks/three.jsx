@@ -55,10 +55,9 @@ const ChallengeThree = () => {
       
       <span className="has-text-grey-lighter theme-override">Select Visualization: </span>
       
-      <button onClick={() => setVisualType('age')}>age</button>
-      <button onClick={() => setVisualType('gender')}>gender</button>
-      <button onClick={() => setVisualType('country')}>country</button>
-      <button onClick={() => setVisualType('registration_date')}>registration date</button>
+      {['age', 'gender', 'country', 'registration_date'].map(type => {
+        return <button key={type} onClick={() => setVisualType(type)}>{type}</button>
+      })}
 
       <div style={{padding: '10px', backgroundColor: 'white', marginTop: '20px'}}>
         <VisualComponent {...filter_by_gender(users)}/>

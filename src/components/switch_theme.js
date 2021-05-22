@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { MoonOutline, Moon, Sun } from "heroicons-react";
+import { Moon, Sun } from "heroicons-react";
 import "../tasks/styles/_four.scss";
 import { useLocation } from 'react-router-dom'
 

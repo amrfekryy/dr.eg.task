@@ -100,7 +100,7 @@ const ChallengeTwo = () => {
                   postcode
                 }, 
                 dob: {age},
-                // dob, nat, registered,
+                // nat, registered,
               } = user
 
               return <tr key={uuid} className="is-size-7 is-family-sans-serif">
@@ -122,12 +122,16 @@ const ChallengeTwo = () => {
                     </div>
                   </div>
                 </td>
+
                 {/* AGE */}
                 <td>{age}</td>
+                
                 {/* LIVES IN */}
                 <td>{`${state}, ${country}`}</td>
+                
                 {/* ADDRESS */}
                 <td>{`${number} ${name} ${city} (${postcode})`}</td>
+                
                 {/* CONTACTS */}
                 <td>
                   <div>
@@ -139,6 +143,7 @@ const ChallengeTwo = () => {
                     </div>
                   </div>
                 </td>
+              
               </tr>
             })
           }

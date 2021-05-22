@@ -97,7 +97,8 @@ const solution = () => {
 
 const ChallengeOne = () => {
   
-  solution()
+  const final_table = solution()
+  // do something with the table
   
   return (
     <>
