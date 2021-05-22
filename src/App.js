@@ -1,25 +1,30 @@
 import { BrowserRouter, Link } from "react-router-dom";
 import Routes from "./Routes";
 import "./_app.scss";
+import SwitchTheme from './components/switch_theme'
 
 export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <ul className="nav">
-          <li>
-            <Link to="/one">Challenge 1</Link>
-          </li>
-          <li>
-            <Link to="/two">Challenge 2</Link>
-          </li>
-          <li>
-            <Link to="/three">Challenge 3</Link>
-          </li>
-          <li>
-            <Link to="/four">Challenge 4</Link>
-          </li>
-        </ul>
+        <div className="level">
+          <ul className="nav">
+            <li>
+              <Link to="/one">Challenge 1</Link>
+            </li>
+            <li>
+              <Link to="/two">Challenge 2</Link>
+            </li>
+            <li>
+              <Link to="/three">Challenge 3</Link>
+            </li>
+            <li>
+              <Link to="/four">Challenge 4</Link>
+            </li>
+          </ul>
+          <SwitchTheme />
+        </div>
+
         <Routes />
       </BrowserRouter>
     </div>
@@ -28,26 +33,26 @@ export default function App() {
 
 export const Home = () => (
   <>
-    <h1 className="title is-1 has-text-white">
+    <h1 className="title is-1 has-text-grey-lighter theme-override">
       Hello
       <span aria-label="wave" role="img">
         👋
       </span>
     </h1>
-    <h2 className="subtitle is-4 has-text-grey-lighter">
+    <h2 className="subtitle is-4 has-text-grey-lighter theme-override">
       We are looking for highly creative individuals. To find them, we have
       devised a test.
     </h2>
 
-    <h2 className="subtitle is-4 has-text-grey-lighter">
+    <h2 className="subtitle is-4 has-text-grey-lighter theme-override">
       There are 4 challenges linked above, each is designed to test a different
       ability. The challenges get progressively more difficult.
     </h2>
 
-    <h2 className="subtitle is-4 has-text-grey-lighter">
+    <h2 className="subtitle is-4 has-text-grey-lighter theme-override">
       All of the required libraries are provided.
     </h2>
-    <h2 className="subtitle is-4 has-text-grey-lighter">Good luck.</h2>
+    <h2 className="subtitle is-4 has-text-grey-lighter theme-override">Good luck.</h2>
   </>
 );
 

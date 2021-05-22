@@ -102,17 +102,17 @@ const ChallengeOne = () => {
   return (
     <>
       <BackToHome />
-      <h1 className="title is-1 has-text-white">Challenge 1</h1>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h1 className="title is-1 has-text-grey-lighter theme-override">Challenge 1</h1>
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         Inside <code>/tasks/one.js</code> you will find a set of arrays. Merge
         them into one array.
       </h2>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         You may not install any additional libraries.
       </h2>
 
-      <br /><h1 className="title is-3 has-text-white">Solution:</h1>
-      <h2 className="subtitle has-text-grey-lighter">
+      <br /><h1 className="title is-3 has-text-grey-lighter theme-override">Solution:</h1>
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         Press <code>F12</code> then <code>F5</code> to see the table in console. And check <code>/tasks/one.js</code> for the code.
       </h2>
     </>

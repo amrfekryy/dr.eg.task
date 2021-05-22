@@ -29,8 +29,18 @@ $input-color: white;
 @import '~bulma/bulma.sass';
 
 body {
-  background-color: #161d2e;
+  // background-color: #161d2e;
   padding: 5%;
+}
+
+.dark {
+  background-color: #161d2e;
+  color: lightgray !important;
+}
+
+.light {
+  background-color: lightgray;
+  color: #161d2e !important;
 }
 
 code {

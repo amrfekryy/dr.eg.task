@@ -48,27 +48,27 @@ const ChallengeTwo = () => {
   return (
     <>
       <BackToHome />
-      <h1 className="title is-1 has-text-white">Challenge 2</h1>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h1 className="title is-1 has-text-grey-lighter theme-override">Challenge 2</h1>
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         Fetch 5 users from the api
         <code>https://randomuser.me/api/?seed=dexi-interview</code> and display
         them in a table.
       </h2>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         A <code>table-example.png</code> has been provided for guidance on
         styling.
       </h2>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         Pay close attention to empty and loading states
       </h2>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         The table should also have a <code>Load More</code> button that fetches
         the next page of the API and appends the results to the existing users.
       </h2>
 
-      <br /><h1 className="title is-3 has-text-white">Solution:</h1>
-
       {/* Insert your table code here */}
+      <br /><h1 className="title is-3 has-text-grey-lighter theme-override">Solution:</h1>
+
       <table 
         className='table is-hoverable is-fullwidth'
         style={{borderRadius: '10px'}}

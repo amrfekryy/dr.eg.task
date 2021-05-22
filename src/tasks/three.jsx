@@ -43,17 +43,17 @@ const ChallengeThree = () => {
   return (
     <>
       <BackToHome />
-      <h1 className="title is-1 has-text-white">Challenge 3</h1>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h1 className="title is-1 has-text-grey-lighter theme-override">Challenge 3</h1>
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         Fetch 100 users from the same api as before, and visualize their
         distribution by <code>age</code>, <code>gender</code>,
         <code>country</code>, and <code>registration date</code>.
       </h2>
 
-      <br /><h1 className="title is-3 has-text-white">Solution:</h1>
       {/* Insert your data visualizations here */}
+      <br /><h1 className="title is-3 has-text-grey-lighter theme-override">Solution:</h1>
       
-      <div className="has-text-grey-lighter">Select Visualization:</div>
+      <div className="has-text-grey-lighter theme-override">Select Visualization:</div>
       
       <button onClick={() => setVisualType('gender')}>gender</button>
       <button onClick={() => setVisualType('age')}>age</button>

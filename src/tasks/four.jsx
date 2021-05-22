@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { BackToHome } from "../App";
 import { MoonOutline, Moon } from "heroicons-react";
 import "./styles/_four.scss";
+import SwitchTheme from '../components/switch_theme'
 
 /* 
   Think: How we would use this Dark/Light mode switcher on other potential routes/components in a bigger application.
@@ -8,25 +10,21 @@ import "./styles/_four.scss";
 */
 
 const ChallengeFour = () => {
+
   return (
     <div className="ch4">
       <BackToHome />
-      <div className="level">
-        <div>
-          <h1 className="title is-1 has-text-white">Challenge 4</h1>
-        </div>
-        <button className="ch4__dark-mode-btn">
-          <Moon fontSize={30} />
-        </button>
+      <div>
+        <h1 className="title is-1 has-text-grey-lighter theme-override">Challenge 4</h1>
       </div>
-      <h2 className="subtitle has-text-grey-lighter">
+      <h2 className="subtitle has-text-grey-lighter theme-override">
         This page is looking a little dark. Mind turning on the lights in here?
         It seems like the toggle button doesn't work...
         <span role="img" aria-label="ponder">
           🤔
         </span>
       </h2>
-      <div className="columns has-text-grey-lighter">
+      <div className="columns has-text-grey-lighter theme-override">
         <div className="column">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -71,6 +69,13 @@ const ChallengeFour = () => {
           <button className="button is-link">Submit</button>
         </div>
       </div>
+    
+    
+      <br /><h1 className="title is-3 has-text-grey-lighter theme-override">Solution:</h1>
+      <h2 className="subtitle has-text-grey-lighter theme-override">
+        Mode toggle button is now functional and displayed on all app routes. It also remembers your last mode choice. 
+      </h2>
+
     </div>
   );
 };
