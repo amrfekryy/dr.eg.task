@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import { BackToHome } from "../App";
-import { MoonOutline, Moon } from "heroicons-react";
+// import { MoonOutline, Moon } from "heroicons-react";
 import "./styles/_four.scss";
-import SwitchTheme from '../components/switch_theme'
 
 /* 
   Think: How we would use this Dark/Light mode switcher on other potential routes/components in a bigger application.

@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom'
 const SwitchTheme = () => {
   const [currentTheme, setTheme] = useState( localStorage.getItem("theme") || 'dark' )
   const location = useLocation();
-  console.log('location', location.pathname);
+  // console.log('location', location.pathname);
 
   const updateTheme = () => {
     document.body.classList.remove('dark')

@@ -21,7 +21,7 @@ const filter_by_gender = (users) => {
 
 const ChallengeThree = () => {
   
-  const [visualType, setVisualType] = useState('gender')
+  const [visualType, setVisualType] = useState('age')
   const [users, setUsers] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   
@@ -53,10 +53,10 @@ const ChallengeThree = () => {
       {/* Insert your data visualizations here */}
       <br /><h1 className="title is-3 has-text-grey-lighter theme-override">Solution:</h1>
       
-      <div className="has-text-grey-lighter theme-override">Select Visualization:</div>
+      <span className="has-text-grey-lighter theme-override">Select Visualization: </span>
       
-      <button onClick={() => setVisualType('gender')}>gender</button>
       <button onClick={() => setVisualType('age')}>age</button>
+      <button onClick={() => setVisualType('gender')}>gender</button>
       <button onClick={() => setVisualType('country')}>country</button>
       <button onClick={() => setVisualType('registration_date')}>registration date</button>
 
