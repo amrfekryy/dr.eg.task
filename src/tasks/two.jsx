@@ -75,7 +75,12 @@ const ChallengeTwo = () => {
       >
         <thead>
           <tr>
-            {['Title', 'First', 'Last', 'Phone'].map(head => <th key={head}>{head}</th>)}
+            {['NAME', 'AGE', 'LIVES IN', 'ADDRESS', 'CONTACTS'].map(head => {
+              
+              return <th key={head}
+                className="is-size-7 is-family-sans-serif has-text-grey"
+              >{head}</th>
+            })}
           </tr>
         </thead>
         <tbody>
@@ -84,19 +89,56 @@ const ChallengeTwo = () => {
             : users.map((user={}) => {
               // destructure user data
               const {
-                name: {title, first, last}, 
-                email, picture,
-                cell, phone, 
-                location, 
-                id, gender, dob, nat, registered,
                 login: {uuid}, 
+                name: {first, last}, 
+                email, 
+                picture: {thumbnail},
+                cell, phone, 
+                location: {
+                  country, state, city, 
+                  street: {number, name}, 
+                  postcode
+                }, 
+                dob: {age},
+                // dob, nat, registered,
               } = user
 
-              return <tr key={uuid}>
-                <td>{title}</td>
-                <td>{first}</td>
-                <td>{last}</td>
-                <td>{phone}</td>
+              return <tr key={uuid} className="is-size-7 is-family-sans-serif">
+
+                {/* NAME */}
+                <td>
+                  <div style={{display: 'flex'}} className="is-flex-direction-row">
+
+                    <div style={{margin: '0 10px'}}>
+                      <img src={thumbnail} alt={`${first} ${last}`} style={{borderRadius: '50%'}} width="40"/>
+                    </div>
+                    <div>
+                      <div className="has-text-weight-semibold">
+                        {`${first} ${last}`}
+                      </div>
+                      <div className="has-text-grey">
+                        {email}
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                {/* AGE */}
+                <td>{age}</td>
+                {/* LIVES IN */}
+                <td>{`${state}, ${country}`}</td>
+                {/* ADDRESS */}
+                <td>{`${number} ${name} ${city} (${postcode})`}</td>
+                {/* CONTACTS */}
+                <td>
+                  <div>
+                    <div className="has-text-weight-semibold">
+                      {`Cell: ${cell}`}
+                    </div>
+                    <div className="has-text-grey">
+                      {`Phone: ${phone}`}
+                    </div>
+                  </div>
+                </td>
               </tr>
             })
           }
