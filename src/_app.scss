@@ -28,9 +28,14 @@ $input-color: white;
 // Import only what you need from Bulma
 @import '~bulma/bulma.sass';
 
+html {
+  height: 100%;
+}
+
 body {
   // background-color: #161d2e;
   padding: 5%;
+  min-height: 100%;
 }
 
 .dark {
